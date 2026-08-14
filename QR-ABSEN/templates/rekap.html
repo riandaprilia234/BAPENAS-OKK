@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rekap Absen — {{ sesi.nama }}</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #F0F4FF; color: #1a1a2e; }
+  header {
+    background: linear-gradient(135deg, #1B5E20, #0D47A1);
+    color: white; padding: 18px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0,0,0,.2);
+  }
+  header h1 { font-size: 18px; font-weight: 800; }
+  header p  { font-size: 13px; opacity: .8; }
+  .back-btn {
+    color: white; text-decoration: none;
+    background: rgba(255,255,255,.15); padding: 8px 18px;
+    border-radius: 20px; font-size: 13px; font-weight: 600;
+    border: 1px solid rgba(255,255,255,.3); transition: background .2s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,.3); }
+  main { max-width: 1100px; margin: 0 auto; padding: 28px 20px; }
+
+  /* STATS */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 28px; }
+  .stat-card {
+    background: white; border-radius: 16px; padding: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.06); text-align: center;
+  }
+  .stat-num { font-size: 40px; font-weight: 900; color: #0D47A1; }
+  .stat-lbl { font-size: 13px; color: #888; margin-top: 4px; }
+
+  /* TABLE */
+  .table-wrap {
+    background: white; border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.06); overflow: hidden;
+  }
+  .table-head {
+    padding: 18px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid #F0F0F0;
+  }
+  .table-head h2 { font-size: 16px; font-weight: 700; color: #1a1a2e; }
+  .btn-csv {
+    background: #1B5E20; color: white; text-decoration: none;
+    padding: 10px 20px; border-radius: 10px;
+    font-size: 13px; font-weight: 700;
+    transition: transform .15s;
+  }
+  .btn-csv:hover { transform: translateY(-2px); }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    background: #0D47A1; color: white;
+    padding: 12px 16px; font-size: 13px; font-weight: 700;
+    text-align: left;
+  }
+  tbody tr { border-bottom: 1px solid #F5F5F5; }
+  tbody tr:nth-child(even) { background: #FAFBFF; }
+  tbody tr:hover { background: #E8F0FE; }
+  tbody td { padding: 12px 16px; font-size: 13px; }
+  .badge-no {
+    display: inline-block; background: #0D47A1; color: white;
+    font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 8px;
+  }
+  .empty-row td { text-align: center; padding: 60px; color: #aaa; font-size: 15px; }
+  .search-wrap { padding: 14px 24px; border-bottom: 1px solid #F0F0F0; }
+  .search-wrap input {
+    width: 100%; max-width: 320px; padding: 10px 16px;
+    border: 2px solid #E3F2FD; border-radius: 10px;
+    font-size: 14px; font-family: 'Inter', sans-serif;
+  }
+  .search-wrap input:focus { outline: none; border-color: #0D47A1; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>📊 Rekap Absen — {{ sesi.nama }}</h1>
+    <p>ID: {{ sesi.id }} | Dibuat: {{ sesi.dibuat }}</p>
+  </div>
+  <a href="/panitia" class="back-btn">← Dashboard</a>
+</header>
+
+<main>
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-num">{{ absen_list|length }}</div>
+      <div class="stat-lbl">Total Peserta Hadir</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" style="color:{% if sesi.aktif %}#1B5E20{% else %}#E65100{% endif %}">
+        {% if sesi.aktif %}AKTIF{% else %}TUTUP{% endif %}
+      </div>
+      <div class="stat-lbl">Status Sesi</div>
+    </div>
+    {% if absen_list %}
+    <div class="stat-card">
+      <div class="stat-num" style="font-size:20px; padding-top:10px;">{{ absen_list[0].waktu }}</div>
+      <div class="stat-lbl">Pertama Hadir</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" style="font-size:20px; padding-top:10px;">{{ absen_list[-1].waktu }}</div>
+      <div class="stat-lbl">Terakhir Hadir</div>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-wrap">
+    <div class="table-head">
+      <h2>📋 Daftar Hadir ({{ absen_list|length }} peserta)</h2>
+      <a href="/panitia/rekap/{{ sesi.id }}/csv" class="btn-csv">⬇ Download CSV</a>
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="🔍 Cari nama, NIM, atau prodi..." oninput="filterTable()">
+    </div>
+    <table id="absen-table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Nama</th>
+          <th>NIM</th>
+          <th>Program Studi</th>
+          <th>Kelompok</th>
+          <th>Waktu Absen</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if absen_list %}
+          {% for a in absen_list %}
+          <tr>
+            <td><span class="badge-no">{{ loop.index }}</span></td>
+            <td><strong>{{ a.nama }}</strong></td>
+            <td style="color:#0D47A1; font-weight:700;">{{ a.nim }}</td>
+            <td>{{ a.prodi }}</td>
+            <td>{{ a.kelompok }}</td>
+            <td style="color:#E65100; font-size:12px;">{{ a.waktu }}</td>
+          </tr>
+          {% endfor %}
+        {% else %}
+          <tr class="empty-row">
+            <td colspan="6">📭 Belum ada peserta yang absen di sesi ini.</td>
+          </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<script>
+function filterTable() {
+  const q = document.getElementById('search').value.toLowerCase();
+  document.querySelectorAll('#absen-table tbody tr').forEach(row => {
+    const txt = row.textContent.toLowerCase();
+    row.style.display = txt.includes(q) ? '' : 'none';
+  });
+}
+// Auto-refresh setiap 5 detik jika sesi masih aktif
+{% if sesi.aktif %}
+setTimeout(() => location.reload(), 5000);
+{% endif %}
+</script>
+</body>
+</html>

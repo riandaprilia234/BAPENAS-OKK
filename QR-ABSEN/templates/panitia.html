@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Panitia | QR Absen OKK ETHIVATION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7f6; color: #333; padding: 20px; }
+        .header { background: #203a43; color: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; text-align: center; }
+        .header h1 { font-size: 24px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .sesi-list { display: flex; flex-direction: column; gap: 15px; }
+        .sesi-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; }
+        .btn { padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; }
+        .btn-green { background: #2ecc71; color: white; }
+        .btn-red { background: #e74c3c; color: white; margin-left: 5px; }
+        .btn-blue { background: #3498db; color: white; }
+        input[type="text"] { padding: 10px; width: 70%; border: 1px solid #ccc; border-radius: 6px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Dashboard Panitia — QR Absen OKK ETHIVATION</h1>
+        <p style="margin-top:5px; font-size:13px; color:#ddd;">Base URL: {{ base_url }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Buka Sesi Absen Baru</h3>
+        <div style="margin-top: 15px; display: flex; gap: 10px;">
+            <input type="text" id="nama-sesi" placeholder="Contoh: Materi 1 - Hari 1 Pagi">
+            <button class="btn btn-blue" onclick="bukaSesi()">Buka Sesi</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Daftar Sesi</h3>
+        <div class="sesi-list" style="margin-top: 15px;">
+            {% for id, s in sesi.items() %}
+            <div class="sesi-item" style="opacity: {{ '1' if s.aktif else '0.6' }};">
+                <div>
+                    <strong>{{ s.nama }}</strong> (ID: {{ id }})<br>
+                    <span style="font-size:12px; color: {{ 'green' if s.aktif else 'red' }};">Status: {{ "AKTIF" if s.aktif else "DITUTUP" }}</span>
+                </div>
+                <div>
+                    {% if s.aktif %}
+                    <a href="/tampilkan-qr/{{ id }}" target="_blank" class="btn btn-green">Tampilkan QR</a>
+                    <button class="btn btn-red" onclick="tutupSesi('{{ id }}')">Tutup</button>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="card">
+        <h3>Rekap Data (Excel Otomatis Pisah Tab)</h3>
+        <p style="font-size:14px; color:#666; margin-top:5px; margin-bottom:15px;">Unduh seluruh data absen maba, dan sistem akan memisahkannya ke dalam puluhan Tab/Sheet Excel secara otomatis sesuai dengan nama Agoranya.</p>
+        <a href="/download-excel" class="btn btn-green">📥 Download Data Absen (.xlsx)</a>
+    </div>
+
+</div>
+
+<script>
+    async function bukaSesi() {
+        const nama = document.getElementById('nama-sesi').value;
+        if (!nama) return alert('Nama sesi harus diisi!');
+        let fd = new FormData();
+        fd.append('nama', nama);
+        await fetch('/panitia/buka-sesi', {method: 'POST', body: fd});
+        location.reload();
+    }
+    async function tutupSesi(id) {
+        if (!confirm('Yakin ingin menutup sesi ini?')) return;
+        await fetch('/panitia/tutup-sesi/' + id, {method: 'POST'});
+        location.reload();
+    }
+</script>
+</body>
+</html>

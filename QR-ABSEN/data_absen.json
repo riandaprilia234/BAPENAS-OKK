@@ -1,0 +1,1597 @@
+{
+    "sesi": {
+        "SESI1784530126": {
+            "nama": "HARI 1",
+            "aktif": false
+        },
+        "SESI1784625754": {
+            "nama": "hari 2",
+            "aktif": false
+        },
+        "SESI1786085493": {
+            "nama": "tes",
+            "aktif": false
+        },
+        "SESI1786094800": {
+            "nama": "ertgy",
+            "aktif": false
+        },
+        "5": {
+            "nama": "Technical Meeting",
+            "aktif": false
+        }
+    },
+    "absen": {
+        "SESI1784530126": {},
+        "SESI1784625754": {},
+        "SESI1786085493": {},
+        "SESI1786094800": {
+            "24410100014": {
+                "nama": "Riandaa Aprilia Maulidia",
+                "waktu": "2026-08-13 13:21:53"
+            },
+            "25410200014": {
+                "nama": "andhika",
+                "agora": "Anjay",
+                "waktu": "2026-08-13 13:33:36"
+            },
+            "123456": {
+                "nama": "liaaa",
+                "agora": "mpu tantular",
+                "waktu": "2026-08-13 13:38:37"
+            },
+            "12245": {
+                "nama": "vian",
+                "agora": "mpu tantular",
+                "waktu": "2026-08-13 14:03:49"
+            },
+            "6899": {
+                "nama": "liaa",
+                "agora": "Han Fei",
+                "waktu": "2026-08-13 14:06:23"
+            },
+            "24410100013": {
+                "nama": "Rianda Aprilia Maulidia",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-13 14:15:19"
+            },
+            "24430200005": {
+                "nama": "Akifahazahra Salzadiyah",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-13 14:23:15"
+            },
+            "24430200001": {
+                "nama": "Daniella Kanani",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-13 14:25:06"
+            },
+            "24420100030": {
+                "nama": "Mochammad Rizki Ramadhan ",
+                "agora": "Thales",
+                "waktu": "2026-08-13 14:25:42"
+            },
+            "24410100050": {
+                "nama": "JOSEPHINE JOY",
+                "agora": "Konfusius",
+                "waktu": "2026-08-13 14:27:32"
+            },
+            "25410100003": {
+                "nama": "Nina Sudono ",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-13 14:27:32"
+            },
+            "3675": {
+                "nama": "dhvcv",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-13 14:31:00"
+            },
+            "678": {
+                "nama": "sggvcdc",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-13 14:31:27"
+            },
+            "24420100051": {
+                "nama": "Haekal",
+                "agora": "Chanakya",
+                "waktu": "2026-08-13 14:33:13"
+            },
+            "24410100038": {
+                "nama": "maximus celcio",
+                "agora": "Han Fei",
+                "waktu": "2026-08-13 15:05:35"
+            },
+            "25410100056": {
+                "nama": "YOSAFAT ARCHIE RISMAHARJO SARLAN",
+                "agora": "Han Fei",
+                "waktu": "2026-08-13 15:07:22"
+            },
+            "24420100039": {
+                "nama": "Yanuar Miftakhul Firdaus",
+                "agora": "Ostanes",
+                "waktu": "2026-08-13 15:07:29"
+            },
+            "25420100021": {
+                "nama": "Keneisha sidqiyyah fawwazah ",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-13 15:09:24"
+            },
+            "24430100039": {
+                "nama": "Purnama Cipta Dewi",
+                "agora": "Konfusius",
+                "waktu": "2026-08-13 15:11:04"
+            },
+            "24430100042": {
+                "nama": "Luqyana chalwa",
+                "agora": "Konfusius",
+                "waktu": "2026-08-13 15:11:05"
+            },
+            "24410100053": {
+                "nama": "Afif",
+                "agora": "Plato",
+                "waktu": "2026-08-13 15:11:27"
+            },
+            "254": {
+                "nama": "hai",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-13 15:12:18"
+            },
+            "25420100006": {
+                "nama": "ANGELA HEAVENLYNA ",
+                "agora": "Notonagoro",
+                "waktu": "2026-08-13 15:12:23"
+            },
+            "24430100052": {
+                "nama": "Aissyta Prameswari",
+                "agora": "Zeno",
+                "waktu": "2026-08-13 15:12:30"
+            },
+            "25430200036": {
+                "nama": "Amara Neva Tarisha",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-13 15:13:11"
+            },
+            "25430200009": {
+                "nama": "Abigail Mikhaelia",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-13 15:14:21"
+            },
+            "25430200012": {
+                "nama": "Barbara Ethania Destiana ",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-13 15:14:22"
+            },
+            "25410100016": {
+                "nama": "Chesya Farahdiba Naifa Nugroho",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-13 15:14:49"
+            },
+            "25410100038": {
+                "nama": "Nadhifa Zahwa Natasyafira",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-13 15:14:54"
+            },
+            "25420100001": {
+                "nama": "Justin Kennard Windriyanto",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-13 15:15:13"
+            },
+            "25410100078": {
+                "nama": "Aggjyan dwi citra tamiwa ",
+                "agora": "Thales",
+                "waktu": "2026-08-13 15:15:40"
+            },
+            "25430200039": {
+                "nama": "Maria Fransiska Angraini",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-13 15:20:18"
+            },
+            "25430100030": {
+                "nama": "Kal",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-13 15:20:21"
+            },
+            "16420200025": {
+                "nama": "Fadil",
+                "agora": "Chanakya",
+                "waktu": "2026-08-13 15:20:57"
+            },
+            "25430100080": {
+                "nama": "Novita ",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-13 15:21:27"
+            },
+            "25430200030": {
+                "nama": "rana naifa",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-13 15:21:46"
+            },
+            "25430200034": {
+                "nama": "Jovita Belvana Bhirowo",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-13 15:21:48"
+            },
+            "25430100016": {
+                "nama": "Angga",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-13 15:21:57"
+            },
+            "2922928": {
+                "nama": "GENDUTTTTTT",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-13 15:22:10"
+            }
+        },
+        "5": {
+            "12345": {
+                "nama": "SELAMAT DATANG OKK ETHIVATION",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 10:25:46"
+            },
+            "26410100066": {
+                "nama": "Cevin Wahyudi",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:24:32"
+            },
+            "26510160009": {
+                "nama": "Muhammad Farhat Ghazali ",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:25:04"
+            },
+            "26430200016": {
+                "nama": "Angeline Stefanie Herman",
+                "agora": "Ki Hajar Dewantara",
+                "waktu": "2026-08-14 13:25:13"
+            },
+            "26410100030": {
+                "nama": "Vincentcius Rafael Santoso",
+                "agora": "Ki Hajar Dewantara",
+                "waktu": "2026-08-14 13:25:46"
+            },
+            "26410100049": {
+                "nama": "Faranisa Aulia Kirani",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:26:01"
+            },
+            "26430100006": {
+                "nama": "JENNIFER VALERIE WIJAYA",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:26:17"
+            },
+            "26430100014": {
+                "nama": "Giovanni Louis Prathama Tandiono ",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:26:20"
+            },
+            "26430200014": {
+                "nama": "Winston Jubille",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:26:30"
+            },
+            "26430100044": {
+                "nama": "Septia Putri Nabilla",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:26:30"
+            },
+            "26430100020": {
+                "nama": "Grace Daniella Putri",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:26:35"
+            },
+            "26430100062": {
+                "nama": "MANDALA PUTRA SUMANJAYA",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:26:46"
+            },
+            "26430100018": {
+                "nama": "Gavril Gervase Gunawan",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:27:09"
+            },
+            "26410100039": {
+                "nama": "Mohamad Eko Alexa Farel Nurbiantoro",
+                "agora": "Ki Hajar Dewantara",
+                "waktu": "2026-08-14 13:27:25"
+            },
+            "26430100003": {
+                "nama": "BUNGA CRYSTA ARASY PUTRI DHARMAWAN",
+                "agora": "Ki Hajar Dewantara",
+                "waktu": "2026-08-14 13:27:25"
+            },
+            "26410100067": {
+                "nama": "Rasya Dean Syahputra ",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:27:38"
+            },
+            "26410100027": {
+                "nama": "MUCHAMMAD FAUZAN SURA SATIBI ",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:27:45"
+            },
+            "26420100069": {
+                "nama": "Sabrina Alisa Hanry",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:27:47"
+            },
+            "26430100023": {
+                "nama": "VALENTINO MICHAEL JACQUELINE",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:27:47"
+            },
+            "26430100061": {
+                "nama": "Kezia Septiani Priyanto",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:27:57"
+            },
+            "26420100048": {
+                "nama": "AISYA FIVEFILLYA ARTANTI",
+                "agora": "Ki Hajar Dewantara",
+                "waktu": "2026-08-14 13:27:59"
+            },
+            "26420100059": {
+                "nama": "MOHAMMAD RIZKY SETIAWAN ",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:28:10"
+            },
+            "26430100064": {
+                "nama": "NADILA LEONA EKA SYAHRANI ",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:28:21"
+            },
+            "26420100051": {
+                "nama": "MUHAMAD GYMNASTIAR",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:28:23"
+            },
+            "26430100066": {
+                "nama": "MOCHAMAD HANAFI GUS AGENG MANIK",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:28:27"
+            },
+            "26410100043": {
+                "nama": "MICHAEL SALMAN ALBAROIN",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:28:29"
+            },
+            "26430100012": {
+                "nama": "Juan Jose Imanuel Wibowo",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:28:43"
+            },
+            "26410200011": {
+                "nama": "JEFRI FEBRIAN",
+                "agora": "Notonagoro",
+                "waktu": "2026-08-14 13:28:45"
+            },
+            "26510160022": {
+                "nama": "MARCHA ANNORA AURELLIA",
+                "agora": "Ki Hajar Dewantara",
+                "waktu": "2026-08-14 13:28:50"
+            },
+            "26410200004": {
+                "nama": "Tangguh Putra Perdana ",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:29:07"
+            },
+            "26430100052": {
+                "nama": "MUHAMMAD ANDRA MAULANA",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:29:25"
+            },
+            "24610100052": {
+                "nama": "Muhammad Fauzan Daffa Hadrian",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:29:28"
+            },
+            "26510160008": {
+                "nama": "Dzul qarnaen brillyance agnar ",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:29:41"
+            },
+            "26420100061": {
+                "nama": "Resti Fauziah Luthfiana",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:29:54"
+            },
+            "26430100005": {
+                "nama": "Aurelia Marsha Embun Diani ",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:29:57"
+            },
+            "26410100021": {
+                "nama": "Theo Favian Wilmer",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:30:09"
+            },
+            "26410100005": {
+                "nama": "Darell Nathaniel Sinatra",
+                "agora": "Notonagoro",
+                "waktu": "2026-08-14 13:30:11"
+            },
+            "26410200025": {
+                "nama": "AHMAT SEPTYAN DWI RIVIANSYAH",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:30:22"
+            },
+            "26410100059": {
+                "nama": "Kavi Adhim",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:30:40"
+            },
+            "26430200017": {
+                "nama": "BUNGA FEBRYANTI",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:30:49"
+            },
+            "26410100004": {
+                "nama": "Richard Nathanael",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:30:52"
+            },
+            "26410300004": {
+                "nama": "Yosua Tandhieca",
+                "agora": "Notonagoro",
+                "waktu": "2026-08-14 13:30:53"
+            },
+            "26420100046": {
+                "nama": "Gabriel Aulia Alief Andrina Saputra ",
+                "agora": "Notonagoro",
+                "waktu": "2026-08-14 13:30:56"
+            },
+            "26430100037": {
+                "nama": "Aulia Salsa Dwi Millatina ",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:31:04"
+            },
+            "26510160030": {
+                "nama": "Alvino Emmanuel Soegiarto",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:31:07"
+            },
+            "26510160020": {
+                "nama": "VALDO REYHAN RENZO PUTRA BOEDYONO",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:31:15"
+            },
+            "26510160003": {
+                "nama": "DIMAS RIZKY ACHMAD FACHREZY",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:31:16"
+            },
+            "26420100015": {
+                "nama": "Rafaela Alethea Gracia Christian ",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:31:27"
+            },
+            "26410100010": {
+                "nama": "Hubert August Hero",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:31:30"
+            },
+            "26410100076": {
+                "nama": "Muhammad Putra Rasyid",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:31:33"
+            },
+            "26410200009": {
+                "nama": "YAYAN ARGA SAPUTRA",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:31:36"
+            },
+            "26420100044": {
+                "nama": "Ahmad Zaky Ilyasa",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:31:40"
+            },
+            "26430200015": {
+                "nama": "layla nur khasanah",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:31:40"
+            },
+            "26410100055": {
+                "nama": "Fitri nur'aini",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:31:43"
+            },
+            "26430100028": {
+                "nama": "Dhaka Dzilal Arbima",
+                "agora": "Ki Hajar Dewantara",
+                "waktu": "2026-08-14 13:31:46"
+            },
+            "26410100056": {
+                "nama": "MICHELLE KIMBERLEY NAOMY",
+                "agora": "Ki Hajar Dewantara",
+                "waktu": "2026-08-14 13:31:47"
+            },
+            "26410200019": {
+                "nama": "Rayhan Nabil Apriansyah ",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:31:49"
+            },
+            "26420100037": {
+                "nama": "Lingga Kanaka Farras",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:31:50"
+            },
+            "26510160031": {
+                "nama": "moristyano jeanova nurillah ",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:31:54"
+            },
+            "26420100022": {
+                "nama": "Grace Luna Eva K",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:32:10"
+            },
+            "26410300003": {
+                "nama": "FRISTANIA AYU WARDANI",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:32:21"
+            },
+            "26420100011": {
+                "nama": "MOCH. SULTAN FAREL GIFARI",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:32:22"
+            },
+            "26410300026": {
+                "nama": "Dhea Rizma Aulia Putri ",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:32:22"
+            },
+            "26510160026": {
+                "nama": "Biyan Najwa Aurell Ardjani",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:32:26"
+            },
+            "26410200022": {
+                "nama": "Jovann Marvellius",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:32:32"
+            },
+            "26410300020": {
+                "nama": "Muhammad faruq",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:32:33"
+            },
+            "26410300012": {
+                "nama": "Muchamad Safarudin",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:32:37"
+            },
+            "26410200013": {
+                "nama": "Samuel Maximillian ",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:32:38"
+            },
+            "26420100057": {
+                "nama": "Raihansya Rafael",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:32:39"
+            },
+            "26420100003": {
+                "nama": "Claryssa Reshana ",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:32:45"
+            },
+            "26410100081": {
+                "nama": "Siwi Setiyo Ningrum",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:32:45"
+            },
+            "26420100035": {
+                "nama": "Felicia Fidela Setiawan ",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:32:49"
+            },
+            "26420100049": {
+                "nama": "Niar Fairuz Tsani ",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:32:53"
+            },
+            "26420100060": {
+                "nama": "AHMAD SYARIFUDDIN",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:32:56"
+            },
+            "26410300015": {
+                "nama": "Daffa' Atho'illah Ahmaddhani",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:32:57"
+            },
+            "26420100014": {
+                "nama": "Jonathan Kurniawan",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:33:04"
+            },
+            "26410300001": {
+                "nama": "Ananda Afva Lyntang Sari",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:33:05"
+            },
+            "26510160010": {
+                "nama": "JONATHAN VALENTINO NATHANIEL",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:33:08"
+            },
+            "26410100073": {
+                "nama": "Bagas Andrea Giovanni Putra Coelho Madeira",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:33:16"
+            },
+            "26410100009": {
+                "nama": "Viviana Tamara",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:33:16"
+            },
+            "26410100042": {
+                "nama": "Meilrel Yorina Rumpeniak ",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:33:20"
+            },
+            "2643020200025": {
+                "nama": "Nashwa Faizah",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:33:20"
+            },
+            "26430200001": {
+                "nama": "Callista Hendrawan",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:33:25"
+            },
+            "26430100001": {
+                "nama": "Loviana Murdianti Ciudi ",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:33:27"
+            },
+            "26430100038": {
+                "nama": "ZICHO NEYRIZA WINATA",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:33:28"
+            },
+            "26410100031": {
+                "nama": "Mochammad Nizar Rizuqllah",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:33:31"
+            },
+            "26430100030": {
+                "nama": "NATANIA DEWI ARIEL",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:33:33"
+            },
+            "26410100019": {
+                "nama": "WILDAN RIZKI RAMADHAN",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:33:39"
+            },
+            "26410100865": {
+                "nama": "MUHAMMAD HABIBI IBRAHIM SULISTIYO",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:33:40"
+            },
+            "26410300019": {
+                "nama": "Muhammad Faris Bathalun Al Bahij ",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:33:41"
+            },
+            "26430200004": {
+                "nama": "Aiko Violana Irene",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:33:41"
+            },
+            "26430100067": {
+                "nama": "NAUVAL RIZKY ADITYA PUTRA",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:33:52"
+            },
+            "26430200006": {
+                "nama": "Vitto Kendrew Hatmoko",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:33:59"
+            },
+            "26430100060": {
+                "nama": "MOCHAMMAD ATTA IZAZ AKBAR ",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:34:02"
+            },
+            "26510160007": {
+                "nama": "Dafa laksana putra",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:34:02"
+            },
+            "26430100015": {
+                "nama": "Azizah Panda Saputri",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:34:05"
+            },
+            "36410300011": {
+                "nama": "DIANNA AYU GREACE TANTINE ",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:05"
+            },
+            "2620100047": {
+                "nama": "Keyza Anastasya Mazaya ",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:34:08"
+            },
+            "26410100060": {
+                "nama": "RHAMA DAMARWIJAYA",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:09"
+            },
+            "26420100001": {
+                "nama": "Athallah Rafi Prabowo",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:34:12"
+            },
+            "26410200015": {
+                "nama": "Christian Ardian Matthew Widigdo",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:34:13"
+            },
+            "26510160002": {
+                "nama": "GIOVANNI JESSICA LIMANTARA",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:34:14"
+            },
+            "26420100036": {
+                "nama": "Laura Syahrotu Shita",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:15"
+            },
+            "26430200008": {
+                "nama": "Shafira Dwi Novianti",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:15"
+            },
+            "26510160025": {
+                "nama": "Azzaka Yusuf Saputra",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:16"
+            },
+            "26410300002": {
+                "nama": "Fahmi Azizu Rohman",
+                "agora": "Ki Hajar Dewantara",
+                "waktu": "2026-08-14 13:34:17"
+            },
+            "26420100063": {
+                "nama": "Mulyaser Rahmadan Oskardi",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:18"
+            },
+            "26410100013": {
+                "nama": "NILUH TASYA CAECILLYA",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:34:20"
+            },
+            "26410300024": {
+                "nama": "NOVAL ARGA VALENZIYA",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:21"
+            },
+            "26420100043": {
+                "nama": "Zakarias afredo rame",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:34:21"
+            },
+            "26430100049": {
+                "nama": "Bintang Faa'iz Al-Farizi ",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:25"
+            },
+            "2410300014": {
+                "nama": "Edghar Kurniawan difi putra",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:34:31"
+            },
+            "26420100058": {
+                "nama": "YOGIANTARA ABIYAKSA",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:34:35"
+            },
+            "26430100019": {
+                "nama": "Raeline Matryoschka",
+                "agora": "Hermarchus",
+                "waktu": "2026-08-14 13:34:37"
+            },
+            "26410100058": {
+                "nama": "Aufa Ramadhani",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:34:42"
+            },
+            "26420100007": {
+                "nama": "Arsen Ferris Anerdy",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:34:43"
+            },
+            "26410100064": {
+                "nama": "Muhammad Raditya Arkan R",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:45"
+            },
+            "26410300021": {
+                "nama": "WIDODO DWI ANDHIKA",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:34:49"
+            },
+            "26410200018": {
+                "nama": "NATALIA ERENCIA KALEKA ",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:34:50"
+            },
+            "26410100057": {
+                "nama": "M.Fardias Nadhir Amrullah ",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:34:52"
+            },
+            "26430200037": {
+                "nama": "ERRIN GRACIA ROSSANO",
+                "agora": "Plato",
+                "waktu": "2026-08-14 13:34:52"
+            },
+            "26430100053": {
+                "nama": "Niswatin yolanda",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:34:57"
+            },
+            "26430100010": {
+                "nama": "Bagus Tegar Allaudhyn Pramudya Putra",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:34:58"
+            },
+            "26410300027": {
+                "nama": "Dwianto Setyawan Natalegawa",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:35:05"
+            },
+            "26430100008": {
+                "nama": "Rifad Maulana",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:35:13"
+            },
+            "26410100071": {
+                "nama": "AHMAD FAHRI WIBOWO",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:35:14"
+            },
+            "26410300025": {
+                "nama": "Fathiya Mecca Ramadhani",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:35:17"
+            },
+            "26420100040": {
+                "nama": "Bryan William Ibranov Teks",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:35:22"
+            },
+            "26430200018": {
+                "nama": "Agita Vinata Christy",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:35:25"
+            },
+            "26410100014": {
+                "nama": "Rahmad Dwi Syaputra ",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:35:35"
+            },
+            "26430100043": {
+                "nama": "Martin dabbo",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:35:38"
+            },
+            "26430200021": {
+                "nama": "Evelyn Athaya Purwanto ",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:35:42"
+            },
+            "26410200005": {
+                "nama": "RAYHAN MANUELL SUDARLY",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:35:54"
+            },
+            "26410100002": {
+                "nama": "Navita novianti kurniasari",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:35:56"
+            },
+            "26410100083": {
+                "nama": "Lionel Ricardo Belo Soares ",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:36:19"
+            },
+            "26420100027": {
+                "nama": "Priesta Amelia Ikhnatus Jannah ",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:36:22"
+            },
+            "26410100001": {
+                "nama": "Owen Faust Gervaise",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:36:25"
+            },
+            "26430100034": {
+                "nama": "Hamdany Ardy Firansyah Malik",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:36:58"
+            },
+            "26420100067": {
+                "nama": "NUGGI PUTRA MAHARDIKA",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:37:11"
+            },
+            "26410200024": {
+                "nama": "Galih Adhika Prabowo",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:37:12"
+            },
+            "26410300017": {
+                "nama": "MAULANA RAKHA SABILLAH",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:37:29"
+            },
+            "26510160033": {
+                "nama": "Mauhibah sausan rizqi",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:37:44"
+            },
+            "26430100009": {
+                "nama": "GABRIELLA DAVINSA NATAWIJAYA",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 13:37:45"
+            },
+            "26510160014": {
+                "nama": "ABU SOFIAN",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:37:47"
+            },
+            "26430200003": {
+                "nama": "ANASTASIA ANGEL SETYO RAHAYU",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:38:01"
+            },
+            "264302000034": {
+                "nama": "Annisa Nailah Yuwanita",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:38:01"
+            },
+            "26430100040": {
+                "nama": "Ageng Imanda Fahrul Nizar Pratama",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:38:01"
+            },
+            "432140": {
+                "nama": "Aurellia Eka Putri Shalsabila",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:38:03"
+            },
+            "26410200026": {
+                "nama": "Andriansyah Oktavio Pramana ",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:38:16"
+            },
+            "26410100026": {
+                "nama": "Elazar Vai Ibrahim",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:38:28"
+            },
+            "26430100046": {
+                "nama": "jagaddhita Zaki natakusuma",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:38:40"
+            },
+            "26430200024": {
+                "nama": "Rafi Mahardika Dwi Rianto",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:38:44"
+            },
+            "26420100024": {
+                "nama": "Arland Hidayatullah Dinata",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:39:04"
+            },
+            "26410100072": {
+                "nama": "DENIAS CHRISTINO BORNEO",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:39:23"
+            },
+            "26430100013": {
+                "nama": "ALFIN ZABBAR RIZKY",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:39:37"
+            },
+            "2641030023": {
+                "nama": "Nazwa Divanda Prastya ",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:39:40"
+            },
+            "26430200026": {
+                "nama": "INDIRA SALSABILA KHAIRUNNISA",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:39:40"
+            },
+            "26430200039": {
+                "nama": "Marcelina Yunita Rahardjo ",
+                "agora": "Notonagoro",
+                "waktu": "2026-08-14 13:39:40"
+            },
+            "26430100004": {
+                "nama": "Andrew Zefanya Putra",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:39:43"
+            },
+            "26420100041": {
+                "nama": "Saffana Azhra As-sanie\u2019",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:39:44"
+            },
+            "260302144": {
+                "nama": "ACHMAD HUMAM",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:39:45"
+            },
+            "26410200021": {
+                "nama": "Theo Dosius Marcellentiano Kuncoro",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:39:48"
+            },
+            "26430100039": {
+                "nama": "Muhammad Arza Mulyawan",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:39:49"
+            },
+            "26410100075": {
+                "nama": "MOHAMMAD ZAKKY QODHAFI",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:39:53"
+            },
+            "2642010007": {
+                "nama": "NIA ADITHA WARDHANI",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:39:54"
+            },
+            "26420100005": {
+                "nama": "Gregorius Lintang Adi Prathama",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:39:54"
+            },
+            "26410100016": {
+                "nama": "Muhammad Moreno Andinsyahputra",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:39:55"
+            },
+            "25420100001": {
+                "nama": "Justin Kennard Windriyanto",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:40:02"
+            },
+            "26420100016": {
+                "nama": "Ahmad Daniel Musthofa",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:40:06"
+            },
+            "26410300010": {
+                "nama": "Sandi Satriawan ",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:40:07"
+            },
+            "26410100045": {
+                "nama": "Fransiskus Anjelo Nandus ",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:40:09"
+            },
+            "26430100041": {
+                "nama": "Singgie Sasta Magenta",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:40:09"
+            },
+            "26410300005": {
+                "nama": "Nativea deen safina wulandari ",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:40:13"
+            },
+            "26420100064": {
+                "nama": "Arizzka Syafriana Putri ",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:40:16"
+            },
+            "26430100017": {
+                "nama": "Lia Priskila ",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:40:18"
+            },
+            "24620100025": {
+                "nama": "Chelsea Gracia Princes aldolf",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:40:25"
+            },
+            "26430100051": {
+                "nama": "Ananda Nurul Fatima Tuzzahro",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:40:27"
+            },
+            "26410100011": {
+                "nama": "Rayhan Alvin Wicaksono ",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:40:31"
+            },
+            "26410300007": {
+                "nama": "Hafid Hamdan Maulana",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:40:34"
+            },
+            "26410100003": {
+                "nama": "Yohanes",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:40:35"
+            },
+            "26510160027": {
+                "nama": "ASYROF AL TSAQIF AUFA RIZQULLAH",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:40:39"
+            },
+            "26420100054": {
+                "nama": "Nasywa Nathania Elirica Aliyah ",
+                "agora": "Thales",
+                "waktu": "2026-08-14 13:40:41"
+            },
+            "26510160032": {
+                "nama": "RAANAN GALANG KUMARA",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:40:42"
+            },
+            "26430200020": {
+                "nama": "Renia Vira Ramadhani ",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:40:46"
+            },
+            "26430200027": {
+                "nama": "Alfredo Richardo Hendra Fono",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:40:48"
+            },
+            "26430100059": {
+                "nama": "Rafael Banu S",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:41:02"
+            },
+            "26410200014": {
+                "nama": "Bintang Jagad Syaputra",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:41:04"
+            },
+            "26510160019": {
+                "nama": "Hunafa Insanj",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:41:06"
+            },
+            "26410100074": {
+                "nama": "ANTONIUS YUANDI ",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:41:07"
+            },
+            "2641010029": {
+                "nama": "ALMAS AFFAN ALFARITZI FAUZI",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:41:13"
+            },
+            "264320031": {
+                "nama": "SELVY APRILIA",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:41:17"
+            },
+            "26410200023": {
+                "nama": "FRANSISKUS XAVERIUS CHRISTIAN ADVENTINO",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:41:19"
+            },
+            "26410100082": {
+                "nama": "MUHAMMAD ALTAF GHAUS ASMARA",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:41:19"
+            },
+            "26410100033": {
+                "nama": "Jovan Angkawidjaja",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:41:29"
+            },
+            "26430200023": {
+                "nama": "Ike Sinar Budiarti ",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:41:33"
+            },
+            "26510160021": {
+                "nama": "Axel Octvianus Chrisdianto Lobo",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:41:34"
+            },
+            "26510160012": {
+                "nama": "ahmad burhanuddin ",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:41:38"
+            },
+            "26430200005": {
+                "nama": "Novita Natalia Winoto",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:41:47"
+            },
+            "26410100053": {
+                "nama": "Dzakwan Andieka Farellino Zidane Sutisna",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:41:56"
+            },
+            "26410300009": {
+                "nama": "INES JULISTHIANI HAUTEAS",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:41:57"
+            },
+            "26410100029": {
+                "nama": "ALMAS AFFAN ALFARITZI FAUZI",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:41:59"
+            },
+            "26420100066": {
+                "nama": "Vincent Owen",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:42:20"
+            },
+            "26420100031": {
+                "nama": "Reyhan setyo juliansyah ",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:42:26"
+            },
+            "26430100021": {
+                "nama": "VIRIYA KALIYANI WIJAYA",
+                "agora": "Nagarjuna",
+                "waktu": "2026-08-14 13:42:27"
+            },
+            "26430200035": {
+                "nama": "Susilowati ",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:42:30"
+            },
+            "26420100056": {
+                "nama": "Raihansya Rafael",
+                "agora": "Ostanes",
+                "waktu": "2026-08-14 13:42:51"
+            },
+            "26420100025": {
+                "nama": "Chelsea Gracia Princes aldolf",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:42:54"
+            },
+            "26430200038": {
+                "nama": "Nafis Putra Maulana",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:43:10"
+            },
+            "26430100002": {
+                "nama": "Elizabeth Zefanya Virginia Sally",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:43:13"
+            },
+            "26430100045": {
+                "nama": "Pius Apnerd Yamafati Halawa",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:43:16"
+            },
+            "26430100047": {
+                "nama": "Keysha Maharani ",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:43:24"
+            },
+            "26510160016": {
+                "nama": "Mochamad Fikri Faizal",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:43:28"
+            },
+            "26410100040": {
+                "nama": "MARVEL AUSTIN NATHANAEL",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:43:31"
+            },
+            "26430100065": {
+                "nama": "choirun nisa",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:43:35"
+            },
+            "26410100069": {
+                "nama": "Keisha Awallya ",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:43:36"
+            },
+            "26420100020": {
+                "nama": "OCTA PRATAMA",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:43:53"
+            },
+            "26410100050": {
+                "nama": "Rasya pramana putra",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:43:54"
+            },
+            "26430200030": {
+                "nama": "Rasta Ayu Putri",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:43:59"
+            },
+            "26510160017": {
+                "nama": "William Imanuel Aryanta ",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:44:00"
+            },
+            "26410100020": {
+                "nama": "Chesta Risqullah",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:44:16"
+            },
+            "26420100017": {
+                "nama": "Mohammad Fajrul Maulana",
+                "agora": "Mpu Tantular",
+                "waktu": "2026-08-14 13:44:19"
+            },
+            "26420100045": {
+                "nama": "Michelle aura angel salsabillah saputra",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:44:19"
+            },
+            "26410100034": {
+                "nama": "Filbert Frederick Ferial",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:44:23"
+            },
+            "26410300006": {
+                "nama": "Maria Anggriani Wonga Jou",
+                "agora": "Wang Yangming",
+                "waktu": "2026-08-14 13:44:30"
+            },
+            "26420100029": {
+                "nama": "Jason Julius Tjandra",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:44:31"
+            },
+            "26510160023": {
+                "nama": "Marvina Ramadhanty Santara ",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:44:32"
+            },
+            "26420100032": {
+                "nama": "Muhammad Habib Rafi Rabbani Sugiyanto",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:44:37"
+            },
+            "26410100025": {
+                "nama": "Ilham Halul Jatmika",
+                "agora": "Al-Kindi",
+                "waktu": "2026-08-14 13:44:47"
+            },
+            "26420100068": {
+                "nama": "RYAN MARCELLINO",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:44:51"
+            },
+            "26410300018": {
+                "nama": "Izola Dian Mahila",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:45:01"
+            },
+            "26420100052": {
+                "nama": "Filemon Christ Arron ",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:45:03"
+            },
+            "26410100012": {
+                "nama": "Putra Perdana Kurniawan",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:45:06"
+            },
+            "26430200019": {
+                "nama": "M. ASHFAN ABIMANYU FIRJATULLAH",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:45:13"
+            },
+            "26430100016": {
+                "nama": "Sally Aura Sacharisa ",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:45:22"
+            },
+            "26420100042": {
+                "nama": "Arya Tirta ",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:45:23"
+            },
+            "26410100061": {
+                "nama": "Anandra Satria Aztamada",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:45:27"
+            },
+            "26510160029": {
+                "nama": "PAULUS ARNOLD WIDHI PERMADI",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:45:28"
+            },
+            "26430100035": {
+                "nama": "MUTIARA FITRI ERVANDA",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:45:38"
+            },
+            "26420100033": {
+                "nama": "Muhamad Rega Ardiansyah",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:45:40"
+            },
+            "26510160024": {
+                "nama": "R Teddy Mulya",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:45:46"
+            },
+            "264330100032": {
+                "nama": "Muhammad Mahindra Yuhandoyo",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:45:47"
+            },
+            "26430100007": {
+                "nama": "FERDINAND JOSE SUDJATMIKO",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:45:52"
+            },
+            "26430100025": {
+                "nama": "Ridwan Arya putra ",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:45:54"
+            },
+            "26410300013": {
+                "nama": "Farel Shandy Alam Syah",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:45:55"
+            },
+            "26410300016": {
+                "nama": "shaleh nuh",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:45:55"
+            },
+            "26430200036": {
+                "nama": "CHELSEA REVA AURELIA OLDI",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:46:00"
+            },
+            "26410100051": {
+                "nama": "KHIYASH PUTRA MUROQOBAH ",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:46:02"
+            },
+            "26420100055": {
+                "nama": "Dewi Lestari",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:46:03"
+            },
+            "26410300028": {
+                "nama": "Christopher kenneth liauw",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:46:05"
+            },
+            "26430100063": {
+                "nama": "Ghea Mourina Chrissanda",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:46:08"
+            },
+            "26430100033": {
+                "nama": "MUHAMMAD RAKHA SATYA WIRAHADI",
+                "agora": "Phytagoras",
+                "waktu": "2026-08-14 13:46:08"
+            },
+            "26410100068": {
+                "nama": "Intan Nuraini",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:46:25"
+            },
+            "26420100026": {
+                "nama": "Elsa Febrina Ama",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:46:33"
+            },
+            "26410300022": {
+                "nama": "Raihan Fardhan Zahraffi",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:46:34"
+            },
+            "26410100044": {
+                "nama": "EGA DIPA NUSANTARA",
+                "agora": "Han Fei",
+                "waktu": "2026-08-14 13:46:41"
+            },
+            "26430200012": {
+                "nama": "Abigail Putri Dias",
+                "agora": "Immanuel Kant",
+                "waktu": "2026-08-14 13:46:43"
+            },
+            "26410100077": {
+                "nama": "MUHAMMAD ALFIN NUR AFRIZAL ",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:46:54"
+            },
+            "26420100053": {
+                "nama": "Amalia Putri",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:46:54"
+            },
+            "26410200017": {
+                "nama": "Kenneth",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:47:06"
+            },
+            "26430100069": {
+                "nama": "Ilmi Reza Suwandhi Dana",
+                "agora": "Konfusius",
+                "waktu": "2026-08-14 13:47:18"
+            },
+            "26410100063": {
+                "nama": "Muhammad Yayang Ahsanul haq",
+                "agora": "Al-Ghazali",
+                "waktu": "2026-08-14 13:47:25"
+            },
+            "26430100070": {
+                "nama": "muhamad revan rajab",
+                "agora": "Alexander Agung",
+                "waktu": "2026-08-14 13:47:26"
+            },
+            "26410100037": {
+                "nama": "MUHAMMAD ILHAM IBRAHIM MUFID",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:47:28"
+            },
+            "26430200022": {
+                "nama": "LEVI RIZKYA NUGRAHANI ",
+                "agora": "Notonagoro",
+                "waktu": "2026-08-14 13:47:40"
+            },
+            "26430100048": {
+                "nama": "LUSIANA APRILLIAYANTI",
+                "agora": "Notonagoro",
+                "waktu": "2026-08-14 13:47:43"
+            },
+            "26410100054": {
+                "nama": "ali darojaty putra",
+                "agora": "Kobo Daishi",
+                "waktu": "2026-08-14 13:48:58"
+            },
+            "26430100022": {
+                "nama": "Damar Tangguh Putro Wibowo",
+                "agora": "Al-Tahtawi",
+                "waktu": "2026-08-14 13:50:08"
+            },
+            "26430100058": {
+                "nama": "ERA FAZIRA",
+                "agora": "Chanakya",
+                "waktu": "2026-08-14 13:52:53"
+            },
+            "26510160018": {
+                "nama": "Nathanael Bimasena Nivo Cellino",
+                "agora": "Thomas Hobbes",
+                "waktu": "2026-08-14 13:58:12"
+            },
+            "26410100046": {
+                "nama": "Muhimmatul Kamilah",
+                "agora": "Roger Bacon",
+                "waktu": "2026-08-14 13:59:01"
+            },
+            "26430200032": {
+                "nama": "Keyzia Kirana Wahjoedi",
+                "agora": "Aristoteles",
+                "waktu": "2026-08-14 13:59:11"
+            },
+            "26410100024": {
+                "nama": "Hermawan agustyanzah Ivan Prasetyo ",
+                "agora": "Nishida Kitaro",
+                "waktu": "2026-08-14 13:59:58"
+            },
+            "26430100057": {
+                "nama": "Adhitya Krisna Rafael Putra Alfian",
+                "agora": "Notonagoro",
+                "waktu": "2026-08-14 14:00:25"
+            },
+            "26410100038": {
+                "nama": "Mochammad Dimas Aditya ",
+                "agora": "Zeno",
+                "waktu": "2026-08-14 14:01:37"
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Absen | OKK ETHIVATION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f4f7f6; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .card { background: white; width: 100%; max-width: 400px; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #203a43; margin-bottom: 20px; font-weight: 800; }
+        label { font-weight: bold; font-size: 14px; color: #555; display: block; margin-bottom: 5px; }
+        input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
+        button { width: 100%; padding: 15px; background: #203a43; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #0f2027; }
+        .timer-warning { font-size: 12px; color: #e74c3c; text-align: center; margin-bottom: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Absensi OKK ETHIVATION</h2>
+        <div class="timer-warning">Waktu Anda tersisa: <span id="sisa-waktu">120</span> detik</div>
+        <form id="absen-form" action="/submit-absen" method="POST">
+            <input type="hidden" name="sesi_id" value="{{ sesi_id }}">
+            
+            <label>NIM</label>
+            <input type="number" name="nim" placeholder="Masukkan NIM Anda" required autofocus>
+            
+            <label>Nama Lengkap</label>
+            <input type="text" name="nama" placeholder="Masukkan Nama Lengkap Anda" required>
+            
+            <label>Nama Agora</label>
+            <select name="agora" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                <option value="" disabled selected>-- Pilih Nama Agora --</option>
+                <option value="Al-Ghazali">Al-Ghazali</option>
+                <option value="Al-Kindi">Al-Kindi</option>
+                <option value="Al-Tahtawi">Al-Tahtawi</option>
+                <option value="Alexander Agung">Alexander Agung</option>
+                <option value="Aristoteles">Aristoteles</option>
+                <option value="Chanakya">Chanakya</option>
+                <option value="Han Fei">Han Fei</option>
+                <option value="Hermarchus">Hermarchus</option>
+                <option value="Immanuel Kant">Immanuel Kant</option>
+                <option value="Ki Hajar Dewantara">Ki Hajar Dewantara</option>
+                <option value="Kobo Daishi">Kobo Daishi</option>
+                <option value="Konfusius">Konfusius</option>
+                <option value="Mpu Tantular">Mpu Tantular</option>
+                <option value="Nagarjuna">Nagarjuna</option>
+                <option value="Nishida Kitaro">Nishida Kitaro</option>
+                <option value="Notonagoro">Notonagoro</option>
+                <option value="Ostanes">Ostanes</option>
+                <option value="Phytagoras">Phytagoras</option>
+                <option value="Plato">Plato</option>
+                <option value="Roger Bacon">Roger Bacon</option>
+                <option value="Thales">Thales</option>
+                <option value="Thomas Hobbes">Thomas Hobbes</option>
+                <option value="Wang Yangming">Wang Yangming</option>
+                <option value="Zeno">Zeno</option>
+            </select>
+            
+            <button type="submit" id="btn-kirim">Kirim Absen</button>
+        </form>
+    </div>
+
+    <script>
+        let timeLeft = 120; // Sesuai aturan baru: 120 detik
+        const timerEl = document.getElementById('sisa-waktu');
+        const btnEl = document.getElementById('btn-kirim');
+
+        function tick() {
+            if (timeLeft <= 0) {
+                btnEl.disabled = true;
+                btnEl.textContent = 'Waktu Habis!';
+                btnEl.style.background = '#ccc';
+                alert('Waktu Anda habis. Silakan scan ulang QR Code di layar!');
+                window.location.href = 'https://www.dinamika.ac.id/';
+                return;
+            }
+            timerEl.textContent = timeLeft;
+            timeLeft--;
+            setTimeout(tick, 1000);
+        }
+        tick();
+
+        // Jitter (Jeda Acak) agar 100 orang tidak hit server bersamaan
+        document.getElementById('absen-form').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            btnEl.disabled = true;
+            btnEl.textContent = '⏳ Mengirim...';
+            
+            const jedaAcak = Math.floor(Math.random() * 4000); // 0-4 detik
+            setTimeout(() => {
+                e.target.submit();
+            }, jedaAcak);
+        });
+    </script>
+</body>
+</html>

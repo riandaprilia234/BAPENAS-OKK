@@ -1,0 +1,6 @@
+- `[ ]` Update `server.py` untuk load/save `data_sanksi.json`
+- `[ ]` Tambah endpoint GET/POST `/sanksi` di `server.py`
+- `[ ]` Buat template `sanksi_form.html` (Formulir pengumpulan sanksi)
+- `[ ]` Tambah endpoint `/panitia/sanksi` dan `/panitia/sanksi/csv` untuk panitia
+- `[ ]` Buat template `panitia_sanksi.html` (Tabel rekap sanksi)
+- `[ ]` Tambahkan tombol/link menuju Dashboard Sanksi di halaman utama `panitia.html`
