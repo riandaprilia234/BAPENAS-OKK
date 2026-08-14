@@ -18,7 +18,7 @@ app = Flask(__name__, template_folder=template_dir)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "BAPENAS2026_OKK_UNDIKA_SECRET_KEY_X9#mK")
 
 DATA_FILE = os.path.join(os.path.dirname(__file__), "data_absen.json")
-ADMIN_PIN = "2026"
+ADMIN_PIN = os.environ.get("ADMIN_PIN", "PanitiaOKK2026#")
 
 data_lock = threading.Lock()
 
