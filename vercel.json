@@ -1,15 +1,8 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "QR-ABSEN/server.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "QR-ABSEN/server.py"
+      "source": "/(.*)",
+      "destination": "/api/index"
     }
   ]
 }

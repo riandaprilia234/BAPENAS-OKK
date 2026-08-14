@@ -1,11 +1,15 @@
 import json
 import os
+import sys
 import threading
 from datetime import datetime
 from flask import Flask, render_template, request, jsonify, Response
 import requests
 import io
 import openpyxl
+
+# Ensure current directory is in sys.path
+sys.path.insert(0, os.path.dirname(__file__))
 
 import supabase_db
 
@@ -36,19 +40,6 @@ def save_data_local(data):
     with data_lock:
         with open(DATA_FILE, "w") as f:
             json.dump(data, f, indent=4)
-
-def get_base_url():
-    # If running on Vercel or custom domain
-    if "VERCEL_URL" in os.environ:
-        return f"https://{os.environ['VERCEL_URL']}"
-    
-    url_file = os.path.join(os.path.dirname(__file__), "public_url.txt")
-    if os.path.exists(url_file):
-        try:
-            return open(url_file).read().strip()
-        except:
-            pass
-    return ""
 
 SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwscj6QY55qJwWW2P8PJZSqIGliKDM_CpWnnYU8m-HB4JG_GI1p8xII-mHFpA1FzRkN/exec"
 
@@ -123,7 +114,6 @@ def submit_absen():
     if nim in absen_sesi:
         return render_template("scan_sukses.html", sudah=True, nim=nim, nama=nama, sesi=data_absen["sesi"][sesi_id])
 
-    # Save to database
     if supabase_db.is_supabase_configured():
         supabase_db.submit_absen(sesi_id, nim, nama, agora, waktu)
     else:
@@ -132,7 +122,6 @@ def submit_absen():
         data_absen["absen"][sesi_id][nim] = {"nama": nama, "agora": agora, "waktu": waktu}
         save_data_local(data_absen)
 
-    # Kirim ke Google Sheets
     try:
         requests.post(SCRIPT_URL, data={"nim": nim, "nama": nama, "agora": agora, "sesi": data_absen["sesi"][sesi_id]["nama"], "waktu": waktu}, timeout=3)
     except:
