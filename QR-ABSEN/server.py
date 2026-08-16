@@ -5,7 +5,8 @@ import threading
 from datetime import datetime, timezone, timedelta
 
 WIB = timezone(timedelta(hours=7))
-from flask import Flask, render_template, request, jsonify, Response
+from flask import Flask, render_template, request, jsonify, Response, session, redirect
+
 import requests
 import io
 import openpyxl
@@ -47,6 +48,8 @@ SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwscj6QY55qJwWW2P8PJZSqIGl
 
 @app.route("/")
 def index():
+    if session.get("panitia"):
+        return redirect("/panitia")
     return render_template("login.html")
 
 @app.route("/panitia", methods=["GET", "POST"])
@@ -54,9 +57,15 @@ def panitia():
     base_url = request.host_url.rstrip("/")
     if request.method == "POST":
         if request.form.get("pin") == ADMIN_PIN:
+            session["panitia"] = True
             data_absen = load_data()
             return render_template("panitia.html", sesi=data_absen["sesi"], base_url=base_url)
-        return "PIN Salah!", 403
+        return render_template("login.html", error="PIN Rahasia Salah! Silakan coba lagi.")
+    
+    if session.get("panitia"):
+        data_absen = load_data()
+        return render_template("panitia.html", sesi=data_absen["sesi"], base_url=base_url)
+        
     return render_template("login.html")
 
 @app.route("/panitia/buka-sesi", methods=["POST"])
@@ -133,6 +142,9 @@ def submit_absen():
 
 @app.route("/download-excel")
 def download_excel():
+    if not session.get("panitia"):
+        return render_template("login.html", error="Khusus Panitia! Masukkan PIN Rahasia terlebih dahulu.")
+        
     data_absen = load_data()
     wb = openpyxl.Workbook()
     default_sheet = wb.active
@@ -172,6 +184,9 @@ def download_excel():
 
 @app.route("/rekap/<sesi_id>")
 def rekap_sesi(sesi_id):
+    if not session.get("panitia"):
+        return render_template("login.html", error="Khusus Panitia! Masukkan PIN Rahasia terlebih dahulu.")
+        
     data_absen = load_data()
     if sesi_id not in data_absen["sesi"]:
         return "Sesi tidak ditemukan.", 404
@@ -193,6 +208,9 @@ def rekap_sesi(sesi_id):
 
 @app.route("/rekap")
 def rekap_latest():
+    if not session.get("panitia"):
+        return render_template("login.html", error="Khusus Panitia! Masukkan PIN Rahasia terlebih dahulu.")
+        
     data_absen = load_data()
     if not data_absen["sesi"]:
         return "Belum ada sesi.", 404
