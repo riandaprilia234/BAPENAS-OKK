@@ -190,7 +190,7 @@
   </div>
 </main>
 
-<script>
+<script id="rekap-script" data-aktif="{{ '1' if sesi.aktif else '0' }}" data-sesi-id="{{ sesi.id }}">
 function filterTable() {
   const q = document.getElementById('search').value.toLowerCase();
   document.querySelectorAll('#table-body tr').forEach(function(row) {
@@ -199,20 +199,27 @@ function filterTable() {
   });
 }
 
-{% if sesi.aktif %}
-setInterval(function() {
-  fetch('/api/live-absen/{{ sesi.id }}')
-    .then(function(res) { return res.json(); })
-    .then(function(data) {
-      if (data && data.length > 0) {
-        var el = document.getElementById('latest-time');
-        if (el) { el.innerText = data[0].waktu || '-'; }
-      }
-    }).catch(function(err) {});
-}, 4000);
+(function() {
+  const scriptEl = document.getElementById('rekap-script');
+  if (!scriptEl) return;
+  const isAktif = scriptEl.getAttribute('data-aktif') === '1';
+  const sesiId = scriptEl.getAttribute('data-sesi-id');
 
-setTimeout(function() { location.reload(); }, 10000);
-{% endif %}
+  if (isAktif) {
+    setInterval(function() {
+      fetch('/api/live-absen/' + sesiId)
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+          if (data && data.length > 0) {
+            const el = document.getElementById('latest-time');
+            if (el) { el.innerText = data[0].waktu || '-'; }
+          }
+        }).catch(function(err) {});
+    }, 4000);
+
+    setTimeout(function() { location.reload(); }, 10000);
+  }
+})();
 </script>
 </body>
 </html>
