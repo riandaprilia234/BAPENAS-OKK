@@ -2,7 +2,7 @@ import json
 import os
 import sys
 import threading
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from flask import Flask, render_template, request, jsonify, Response
 import requests
 import io
@@ -102,7 +102,7 @@ def submit_absen():
     nim = request.form.get("nim")
     nama = request.form.get("nama")
     agora = request.form.get("agora", "-")
-    waktu = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    waktu = datetime.now(WIB).strftime("%Y-%m-%d %H:%M:%S")
 
     data_absen = load_data()
 
