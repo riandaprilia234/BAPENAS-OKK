@@ -3,6 +3,8 @@ import os
 import sys
 import threading
 from datetime import datetime, timezone, timedelta
+
+WIB = timezone(timedelta(hours=7))
 from flask import Flask, render_template, request, jsonify, Response
 import requests
 import io
