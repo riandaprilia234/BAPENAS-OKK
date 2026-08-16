@@ -38,6 +38,9 @@
   }
   .stat-num { font-size: 36px; font-weight: 900; color: #38BDF8; }
   .stat-lbl { font-size: 13px; color: #94A3B8; margin-top: 4px; font-weight: 600; }
+  .text-green { color: #10B981; }
+  .text-red { color: #EF4444; }
+  .text-amber { color: #F59E0B; font-size: 18px; padding-top: 10px; }
   
   .live-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -103,6 +106,9 @@
     font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 8px;
     border: 1px solid rgba(56, 189, 248, 0.3);
   }
+  .col-nim { color: #38BDF8; font-weight: 700; }
+  .col-nama { color: #F8FAFC; font-weight: 600; }
+  .col-waktu { color: #F59E0B; font-size: 13px; font-weight: 600; }
   .empty-row td { text-align: center; padding: 60px; color: #64748B; font-size: 15px; }
 </style>
 </head>
@@ -129,13 +135,13 @@
       <div class="stat-lbl">Total Mahasiswa Hadir</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:{% if sesi.aktif %}#10B981{% else %}#EF4444{% endif %}">
+      <div class="stat-num {% if sesi.aktif %}text-green{% else %}text-red{% endif %}">
         {% if sesi.aktif %}AKTIF{% else %}TUTUP{% endif %}
       </div>
       <div class="stat-lbl">Status Sesi</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="font-size:18px; padding-top:10px; color:#F59E0B;" id="latest-time">
+      <div class="stat-num text-amber" id="latest-time">
         {% if absen_list %}{{ absen_list[-1].waktu }}{% else %}-{% endif %}
       </div>
       <div class="stat-lbl">Presensi Terbaru (WIB)</div>
@@ -168,10 +174,10 @@
           {% for a in absen_list %}
           <tr>
             <td><span class="badge-no">{{ loop.index }}</span></td>
-            <td style="color:#38BDF8; font-weight:700;">{{ a.nim }}</td>
-            <td style="color:#F8FAFC; font-weight:600;">{{ a.nama }}</td>
+            <td class="col-nim">{{ a.nim }}</td>
+            <td class="col-nama">{{ a.nama }}</td>
             <td><span class="badge-agora">{{ a.agora }}</span></td>
-            <td style="color:#F59E0B; font-size:13px; font-weight:600;">{{ a.waktu }}</td>
+            <td class="col-waktu">{{ a.waktu }}</td>
           </tr>
           {% endfor %}
         {% else %}
@@ -187,26 +193,25 @@
 <script>
 function filterTable() {
   const q = document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('#table-body tr').forEach(row => {
+  document.querySelectorAll('#table-body tr').forEach(function(row) {
     const txt = row.textContent.toLowerCase();
     row.style.display = txt.includes(q) ? '' : 'none';
   });
 }
 
 {% if sesi.aktif %}
-// Auto-refresh data live setiap 4 detik untuk update presensi masuk terbaru secara halus
 setInterval(function() {
   fetch('/api/live-absen/{{ sesi.id }}')
-    .then(res => res.json())
-    .then(data => {
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
       if (data && data.length > 0) {
-        document.getElementById('latest-time').innerText = data[0].waktu || '-';
+        var el = document.getElementById('latest-time');
+        if (el) { el.innerText = data[0].waktu || '-'; }
       }
-    }).catch(err => console.log(err));
+    }).catch(function(err) {});
 }, 4000);
 
-// Auto reload halaman penuh setiap 10 detik agar tabel spreadsheet ter-update
-setTimeout(() => location.reload(), 10000);
+setTimeout(function() { location.reload(); }, 10000);
 {% endif %}
 </script>
 </body>
