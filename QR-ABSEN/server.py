@@ -170,6 +170,52 @@ def download_excel():
         headers={"Content-Disposition": "attachment;filename=Rekap_MultiTab_OKK_ETHIVATION.xlsx"}
     )
 
+@app.route("/rekap/<sesi_id>")
+def rekap_sesi(sesi_id):
+    data_absen = load_data()
+    if sesi_id not in data_absen["sesi"]:
+        return "Sesi tidak ditemukan.", 404
+    
+    sesi = data_absen["sesi"][sesi_id]
+    sesi["id"] = sesi_id
+    absen_dict = data_absen["absen"].get(sesi_id, {})
+    
+    absen_list = []
+    for nim, info in absen_dict.items():
+        absen_list.append({
+            "nim": nim,
+            "nama": info.get("nama", ""),
+            "agora": info.get("agora", "-"),
+            "waktu": info.get("waktu", "")
+        })
+        
+    return render_template("rekap.html", sesi=sesi, absen_list=absen_list, base_url=request.host_url.rstrip("/"))
+
+@app.route("/rekap")
+def rekap_latest():
+    data_absen = load_data()
+    if not data_absen["sesi"]:
+        return "Belum ada sesi.", 404
+    latest_id = list(data_absen["sesi"].keys())[-1]
+    return rekap_sesi(latest_id)
+
+@app.route("/api/recent-checkins")
+def api_recent_checkins():
+    data_absen = load_data()
+    semua_checkins = []
+    
+    for sesi_id, absen_dict in data_absen.get("absen", {}).items():
+        for nim, info in absen_dict.items():
+            semua_checkins.append({
+                "nim": nim,
+                "nama": info.get("nama", ""),
+                "agora": info.get("agora", "-"),
+                "waktu": info.get("waktu", "")
+            })
+            
+    semua_checkins.sort(key=lambda x: x["waktu"], reverse=True)
+    return jsonify(semua_checkins[:10])
+
 @app.route("/api/live-absen/<sesi_id>")
 def api_live_absen(sesi_id):
     data_absen = load_data()

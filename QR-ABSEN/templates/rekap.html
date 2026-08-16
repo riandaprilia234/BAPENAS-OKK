@@ -3,148 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rekap Absen — {{ sesi.nama }}</title>
+<title>Live Rekap Presensi — OKK ETHIVATION 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', sans-serif; background: #F0F4FF; color: #1a1a2e; }
+  body { font-family: 'Inter', sans-serif; background: #0F172A; color: #F8FAFC; min-height: 100vh; }
+  
   header {
-    background: linear-gradient(135deg, #1B5E20, #0D47A1);
-    color: white; padding: 18px 32px;
+    background: linear-gradient(135deg, #1E293B, #0F172A);
+    padding: 20px 32px;
     display: flex; align-items: center; justify-content: space-between;
-    box-shadow: 0 4px 20px rgba(0,0,0,.2);
+    border-bottom: 1px solid #334155;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   }
-  header h1 { font-size: 18px; font-weight: 800; }
-  header p  { font-size: 13px; opacity: .8; }
+  header h1 { font-size: 20px; font-weight: 800; color: #38BDF8; display: flex; align-items: center; gap: 8px; }
+  header p  { font-size: 13px; color: #94A3B8; margin-top: 2px; }
+  
   .back-btn {
-    color: white; text-decoration: none;
-    background: rgba(255,255,255,.15); padding: 8px 18px;
-    border-radius: 20px; font-size: 13px; font-weight: 600;
-    border: 1px solid rgba(255,255,255,.3); transition: background .2s;
+    color: #F8FAFC; text-decoration: none;
+    background: #334155; padding: 8px 18px;
+    border-radius: 12px; font-size: 13px; font-weight: 600;
+    border: 1px solid #475569; transition: all .2s;
   }
-  .back-btn:hover { background: rgba(255,255,255,.3); }
-  main { max-width: 1100px; margin: 0 auto; padding: 28px 20px; }
+  .back-btn:hover { background: #475569; border-color: #64748B; }
+  
+  main { max-width: 1200px; margin: 0 auto; padding: 28px 20px; }
 
-  /* STATS */
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 28px; }
+  /* STATS CARDS */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
   .stat-card {
-    background: white; border-radius: 16px; padding: 20px;
-    box-shadow: 0 4px 16px rgba(0,0,0,.06); text-align: center;
+    background: #1E293B; border-radius: 16px; padding: 20px;
+    border: 1px solid #334155; text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
   }
-  .stat-num { font-size: 40px; font-weight: 900; color: #0D47A1; }
-  .stat-lbl { font-size: 13px; color: #888; margin-top: 4px; }
+  .stat-num { font-size: 36px; font-weight: 900; color: #38BDF8; }
+  .stat-lbl { font-size: 13px; color: #94A3B8; margin-top: 4px; font-weight: 600; }
+  
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(16, 185, 129, 0.15); color: #10B981;
+    font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+  .pulse-dot {
+    width: 8px; height: 8px; background: #10B981; border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  }
 
-  /* TABLE */
+  /* TABLE SECTION */
   .table-wrap {
-    background: white; border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0,0,0,.06); overflow: hidden;
+    background: #1E293B; border-radius: 16px;
+    border: 1px solid #334155; overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   }
   .table-head {
     padding: 18px 24px;
-    display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 1px solid #F0F0F0;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    border-bottom: 1px solid #334155; background: #0F172A;
   }
-  .table-head h2 { font-size: 16px; font-weight: 700; color: #1a1a2e; }
-  .btn-csv {
-    background: #1B5E20; color: white; text-decoration: none;
-    padding: 10px 20px; border-radius: 10px;
-    font-size: 13px; font-weight: 700;
-    transition: transform .15s;
+  .table-head h2 { font-size: 17px; font-weight: 700; color: #F8FAFC; }
+  
+  .btn-download {
+    background: linear-gradient(135deg, #10B981, #059669); color: white; text-decoration: none;
+    padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 700;
+    display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    transition: transform .15s, box-shadow .15s;
   }
-  .btn-csv:hover { transform: translateY(-2px); }
+  .btn-download:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4); }
+  
+  .search-wrap { padding: 14px 24px; border-bottom: 1px solid #334155; background: #1E293B; }
+  .search-wrap input {
+    width: 100%; max-width: 380px; padding: 10px 16px;
+    background: #0F172A; border: 1px solid #475569; border-radius: 10px;
+    color: #F8FAFC; font-size: 14px; font-family: 'Inter', sans-serif;
+  }
+  .search-wrap input:focus { outline: none; border-color: #38BDF8; box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2); }
+  
   table { width: 100%; border-collapse: collapse; }
   thead th {
-    background: #0D47A1; color: white;
-    padding: 12px 16px; font-size: 13px; font-weight: 700;
-    text-align: left;
+    background: #0F172A; color: #94A3B8;
+    padding: 14px 20px; font-size: 12px; font-weight: 700; text-transform: uppercase;
+    text-align: left; border-bottom: 1px solid #334155;
   }
-  tbody tr { border-bottom: 1px solid #F5F5F5; }
-  tbody tr:nth-child(even) { background: #FAFBFF; }
-  tbody tr:hover { background: #E8F0FE; }
-  tbody td { padding: 12px 16px; font-size: 13px; }
+  tbody tr { border-bottom: 1px solid #334155; transition: background .15s; }
+  tbody tr:hover { background: #334155; }
+  tbody td { padding: 14px 20px; font-size: 14px; color: #CBD5E1; }
+  
   .badge-no {
-    display: inline-block; background: #0D47A1; color: white;
-    font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 8px;
+    display: inline-block; background: #334155; color: #38BDF8;
+    font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px;
   }
-  .empty-row td { text-align: center; padding: 60px; color: #aaa; font-size: 15px; }
-  .search-wrap { padding: 14px 24px; border-bottom: 1px solid #F0F0F0; }
-  .search-wrap input {
-    width: 100%; max-width: 320px; padding: 10px 16px;
-    border: 2px solid #E3F2FD; border-radius: 10px;
-    font-size: 14px; font-family: 'Inter', sans-serif;
+  .badge-agora {
+    display: inline-block; background: rgba(56, 189, 248, 0.15); color: #38BDF8;
+    font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 8px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
   }
-  .search-wrap input:focus { outline: none; border-color: #0D47A1; }
+  .empty-row td { text-align: center; padding: 60px; color: #64748B; font-size: 15px; }
 </style>
 </head>
 <body>
+
 <header>
   <div>
-    <h1>📊 Rekap Absen — {{ sesi.nama }}</h1>
-    <p>ID: {{ sesi.id }} | Dibuat: {{ sesi.dibuat }}</p>
+    <h1>📊 Live Spreadsheet Presensi OKK ETHIVATION</h1>
+    <p>Sesi: <strong>{{ sesi.nama }}</strong> (ID: {{ sesi.id }})</p>
   </div>
-  <a href="/panitia" class="back-btn">← Dashboard</a>
+  <div style="display:flex; align-items:center; gap:12px;">
+    {% if sesi.aktif %}
+    <span class="live-badge"><span class="pulse-dot"></span> Presensi Live Updating</span>
+    {% endif %}
+    <a href="/panitia" class="back-btn">← Dashboard Panitia</a>
+  </div>
 </header>
 
 <main>
   <!-- STATS -->
   <div class="stats">
     <div class="stat-card">
-      <div class="stat-num">{{ absen_list|length }}</div>
-      <div class="stat-lbl">Total Peserta Hadir</div>
+      <div class="stat-num" id="total-count">{{ absen_list|length }}</div>
+      <div class="stat-lbl">Total Mahasiswa Hadir</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num" style="color:{% if sesi.aktif %}#1B5E20{% else %}#E65100{% endif %}">
+      <div class="stat-num" style="color:{% if sesi.aktif %}#10B981{% else %}#EF4444{% endif %}">
         {% if sesi.aktif %}AKTIF{% else %}TUTUP{% endif %}
       </div>
       <div class="stat-lbl">Status Sesi</div>
     </div>
-    {% if absen_list %}
     <div class="stat-card">
-      <div class="stat-num" style="font-size:20px; padding-top:10px;">{{ absen_list[0].waktu }}</div>
-      <div class="stat-lbl">Pertama Hadir</div>
+      <div class="stat-num" style="font-size:18px; padding-top:10px; color:#F59E0B;" id="latest-time">
+        {% if absen_list %}{{ absen_list[-1].waktu }}{% else %}-{% endif %}
+      </div>
+      <div class="stat-lbl">Presensi Terbaru (WIB)</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-num" style="font-size:20px; padding-top:10px;">{{ absen_list[-1].waktu }}</div>
-      <div class="stat-lbl">Terakhir Hadir</div>
-    </div>
-    {% endif %}
   </div>
 
   <!-- TABLE -->
   <div class="table-wrap">
     <div class="table-head">
-      <h2>📋 Daftar Hadir ({{ absen_list|length }} peserta)</h2>
-      <a href="/panitia/rekap/{{ sesi.id }}/csv" class="btn-csv">⬇ Download CSV</a>
+      <h2>📋 Rekap Data Live Spreadsheet</h2>
+      <a href="/download-excel" class="btn-download">📥 Download Excel Multi-Tab (.xlsx)</a>
     </div>
+    
     <div class="search-wrap">
-      <input type="text" id="search" placeholder="🔍 Cari nama, NIM, atau prodi..." oninput="filterTable()">
+      <input type="text" id="search" placeholder="🔍 Cari NIM, Nama Lengkap, atau Agora..." oninput="filterTable()">
     </div>
+
     <table id="absen-table">
       <thead>
         <tr>
-          <th>No.</th>
-          <th>Nama</th>
+          <th style="width: 60px;">No.</th>
           <th>NIM</th>
-          <th>Program Studi</th>
-          <th>Kelompok</th>
-          <th>Waktu Absen</th>
+          <th>Nama Lengkap</th>
+          <th>Nama Agora</th>
+          <th>Waktu Absen (WIB)</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="table-body">
         {% if absen_list %}
           {% for a in absen_list %}
           <tr>
             <td><span class="badge-no">{{ loop.index }}</span></td>
-            <td><strong>{{ a.nama }}</strong></td>
-            <td style="color:#0D47A1; font-weight:700;">{{ a.nim }}</td>
-            <td>{{ a.prodi }}</td>
-            <td>{{ a.kelompok }}</td>
-            <td style="color:#E65100; font-size:12px;">{{ a.waktu }}</td>
+            <td style="color:#38BDF8; font-weight:700;">{{ a.nim }}</td>
+            <td style="color:#F8FAFC; font-weight:600;">{{ a.nama }}</td>
+            <td><span class="badge-agora">{{ a.agora }}</span></td>
+            <td style="color:#F59E0B; font-size:13px; font-weight:600;">{{ a.waktu }}</td>
           </tr>
           {% endfor %}
         {% else %}
           <tr class="empty-row">
-            <td colspan="6">📭 Belum ada peserta yang absen di sesi ini.</td>
+            <td colspan="5">📭 Belum ada peserta yang absen di sesi ini.</td>
           </tr>
         {% endif %}
       </tbody>
@@ -155,14 +187,26 @@
 <script>
 function filterTable() {
   const q = document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('#absen-table tbody tr').forEach(row => {
+  document.querySelectorAll('#table-body tr').forEach(row => {
     const txt = row.textContent.toLowerCase();
     row.style.display = txt.includes(q) ? '' : 'none';
   });
 }
-// Auto-refresh setiap 5 detik jika sesi masih aktif
+
 {% if sesi.aktif %}
-setTimeout(() => location.reload(), 5000);
+// Auto-refresh data live setiap 4 detik untuk update presensi masuk terbaru secara halus
+setInterval(function() {
+  fetch('/api/live-absen/{{ sesi.id }}')
+    .then(res => res.json())
+    .then(data => {
+      if (data && data.length > 0) {
+        document.getElementById('latest-time').innerText = data[0].waktu || '-';
+      }
+    }).catch(err => console.log(err));
+}, 4000);
+
+// Auto reload halaman penuh setiap 10 detik agar tabel spreadsheet ter-update
+setTimeout(() => location.reload(), 10000);
 {% endif %}
 </script>
 </body>
