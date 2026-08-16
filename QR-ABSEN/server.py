@@ -94,10 +94,15 @@ def tutup_sesi(sesi_id):
 @app.route("/tampilkan-qr/<sesi_id>")
 def tampilkan_qr(sesi_id):
     data_absen = load_data()
-    if sesi_id not in data_absen["sesi"] or not data_absen["sesi"][sesi_id]["aktif"]:
-        return "Sesi tidak aktif atau tidak ditemukan."
+    if sesi_id not in data_absen["sesi"]:
+        return render_template("sesi_ditutup.html", sesi_id=None, sesi_nama="Sesi Tidak Ditemukan")
+    
+    sesi_info = data_absen["sesi"][sesi_id]
+    if not sesi_info.get("aktif"):
+        return render_template("sesi_ditutup.html", sesi_id=sesi_id, sesi_nama=sesi_info.get("nama"))
+
     base_url = request.host_url.rstrip("/")
-    return render_template("tampilan_qr.html", sesi_id=sesi_id, sesi=data_absen["sesi"][sesi_id], base_url=base_url)
+    return render_template("tampilan_qr.html", sesi_id=sesi_id, sesi=sesi_info, base_url=base_url)
 
 @app.route("/scan")
 def scan():
